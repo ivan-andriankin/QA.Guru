@@ -21,7 +21,7 @@ public class HomeWork3 {
     }
 
     @Test
-    void optionalTaksMoveByOffset() {
+    void optionalTakMoveByOffset() {
 
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().clickAndHold($("#column-a")).moveByOffset(200, 0).release().perform();
