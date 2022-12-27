@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.codeborne:selenide:6.3.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide/6.3.5/8b2f7cc69ff09187cf3eef28dc240919b7e130b0/selenide-6.3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide/6.3.5/fbf9e459786cffe2841639d0e5f92d737fac89cb/selenide-6.3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
