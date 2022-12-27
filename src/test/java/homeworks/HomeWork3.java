@@ -19,4 +19,17 @@ public class HomeWork3 {
         $("h1").shouldHave(text("Build like the best"));
         
     }
+
+    @Test
+    void optionalTask() {
+
+        // Откройте https://the-internet.herokuapp.com/drag_and_drop
+
+        // Перенесите прямоугольник А на место В
+
+        // Проверьте, что прямоугольники действительно поменялись
+
+        // В Selenide есть команда $(element).dragAndDrop($(to-element)), проверьте работает ли тест, если использовать её вместо actions()
+
+    }
 }
