@@ -21,15 +21,19 @@ public class HomeWork3 {
     }
 
     @Test
-    void optionalTask() {
+    void optionalTaksMoveByOffset() {
 
-        // Откройте https://the-internet.herokuapp.com/drag_and_drop
+        open("https://the-internet.herokuapp.com/drag_and_drop");
+        actions().clickAndHold($("#column-a")).moveByOffset(200, 0).release().perform();
+        // другой вариант: actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(200, 0).release().perform();
+        $("#column-b header").shouldHave(text("A"));
+    }
 
-        // Перенесите прямоугольник А на место В
+    @Test
+    void optionalTaskDragAndDrop() {
 
-        // Проверьте, что прямоугольники действительно поменялись
-
-        // В Selenide есть команда $(element).dragAndDrop($(to-element)), проверьте работает ли тест, если использовать её вместо actions()
-
+        open("https://the-internet.herokuapp.com/drag_and_drop");
+        $("#column-a").dragAndDropTo("#column-b");
+        $("#column-a header").shouldHave(text("B"));
     }
 }
