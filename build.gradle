@@ -1,11 +1,14 @@
+// говорим, что используем язык Java
 plugins {
     id 'java-library'
 }
 
+// говорим откуда будем подтягивать зависимости
 repositories {
     mavenCentral()
 }
 
+// какие зависимости будем использовать
 dependencies {
     testImplementation (
             "com.codeborne:selenide:6.3.5",

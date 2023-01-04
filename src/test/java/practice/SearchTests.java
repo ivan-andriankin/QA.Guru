@@ -1,4 +1,5 @@
-import com.codeborne.selenide.Selenide;
+package practice;
+
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
