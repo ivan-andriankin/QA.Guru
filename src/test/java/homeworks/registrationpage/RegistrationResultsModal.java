@@ -1,4 +1,4 @@
-package homeworks.homeworkfour;
+package homeworks.registrationpage;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;

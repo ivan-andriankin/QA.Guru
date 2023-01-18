@@ -1,4 +1,4 @@
-package homeworks.homeworkfour;
+package homeworks.registrationpage;
 
 import static com.codeborne.selenide.Selenide.$;
 
