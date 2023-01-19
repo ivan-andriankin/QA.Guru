@@ -16,8 +16,8 @@ public class RegistrationForm extends TestBase {
         String gender = "Other";
         String userNumber = "8777888123";
         String[] userBirthday = {"29", "May", "1991"};
-        String userSubject = "eng";
-        String userHobby = "Reading";
+        String[] userSubject = {"English", "Accounting"};
+        String[] userHobby = {"Reading", "Sports"};
         String currentAddress = "Somewhere in India";
         String state = "Rajasthan";
         String city = "Jaipur";
@@ -29,8 +29,8 @@ public class RegistrationForm extends TestBase {
                 .setGender(gender)
                 .setUserNumber(userNumber)
                 .setBirthDate(userBirthday[0], userBirthday[1], userBirthday[2])
-                .setUserSubject(userSubject)
-                .setUserHobby(userHobby)
+                .setUserSubject(userSubject[0], userSubject[1])
+                .setUserHobby(userHobby[0], userHobby[1])
                 .uploadPicture("src/test/java/resources/images/road.png")
                 .setCurrentAddress(currentAddress)
                 .setStateAndCity(state, city);
@@ -41,11 +41,17 @@ public class RegistrationForm extends TestBase {
                 .verifyResult("Gender", gender)
                 .verifyResult("Mobile", userNumber)
                 .verifyResult("Date of Birth",
-                        userBirthday[0] + " " + userBirthday[1] + "," + userBirthday[2]);
+                        userBirthday[0] + " " + userBirthday[1] + "," + userBirthday[2])
+                .verifyResult("Subjects", userSubject[0] + ", " + userSubject[1])
+                .verifyResult("Hobbies", userHobby[0] + ", " + userHobby[1])
+                .verifyResult("Picture", "road.png")
+                .verifyResult("Address", currentAddress)
+                .verifyResult("State and City", state + " " + city)
+        ;
 
         // close the confirmation pop-up
         $("#closeLargeModal").click();
-
+        
     }
 
 }

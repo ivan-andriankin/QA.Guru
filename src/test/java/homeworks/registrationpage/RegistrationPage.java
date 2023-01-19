@@ -65,13 +65,15 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setUserSubject(String value) {
-        userSubjectElement.setValue(value).pressEnter();
+    public RegistrationPage setUserSubject(String valueOne, String valueTwo) {
+        userSubjectElement.setValue(valueOne).pressEnter();
+        userSubjectElement.setValue(valueTwo).pressEnter();
         return this;
     }
 
-    public RegistrationPage setUserHobby(String value) {
-        userHobbyElement.$(byText(value)).click();
+    public RegistrationPage setUserHobby(String valueOne, String valueTwo) {
+        userHobbyElement.$(byText(valueOne)).click();
+        userHobbyElement.$(byText(valueTwo)).click();
         return this;
     }
 
