@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 
 
 
-public class Practice8_1 {
+public class BasicTestAnnotations {
 
     @BeforeAll
     static void beforeAll() {
