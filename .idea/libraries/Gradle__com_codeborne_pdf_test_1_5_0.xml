@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.codeborne:pdf-test:1.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/pdf-test/1.5.0/b7c7349cacac854d9ae2abbc3a43173cbea9feab/pdf-test-1.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/pdf-test/1.5.0/cbfcede2d7d949fa907b7d5750da617144fffa69/pdf-test-1.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
