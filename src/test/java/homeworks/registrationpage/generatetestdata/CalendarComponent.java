@@ -1,4 +1,4 @@
-package homeworks.registrationpage;
+package homeworks.registrationpage.generatetestdata;
 
 import static com.codeborne.selenide.Selenide.$;
 

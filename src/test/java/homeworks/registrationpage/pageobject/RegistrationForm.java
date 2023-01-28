@@ -1,4 +1,4 @@
-package homeworks.registrationpage;
+package homeworks.registrationpage.pageobject;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,6 @@ public class RegistrationForm extends TestBase {
     @Test
     void firstTest() {
 
-        // Variables used in this test case
         String firstName = "Ivan";
         String lastName = "Andriankin";
         String userEmail = "qqq@bk.ru";

@@ -1,4 +1,4 @@
-package homeworks.registrationpage;
+package homeworks.registrationpage.generatetestdata;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;

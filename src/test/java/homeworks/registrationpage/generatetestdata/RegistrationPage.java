@@ -1,4 +1,4 @@
-package homeworks.registrationpage;
+package homeworks.registrationpage.generatetestdata;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -78,7 +78,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage uploadPicture(String value) {
-        uploadPictureElement.uploadFile(new File(value));
+        uploadPictureElement.uploadFromClasspath(value);
         return this;
     }
 

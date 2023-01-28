@@ -7,8 +7,8 @@ import java.lang.reflect.Method;
 public class MiniJUnit {
 
     public static void main(String[] args) throws Exception {
-        // 1) Ищет классы с аннотацией @Test
 
+        // 1) Ищет классы с аннотацией @Test
         Method[] methods = DemoTest.class.getDeclaredMethods();
         for (Method method : methods) {
             Test annotation = method.getAnnotation(Test.class);
@@ -23,6 +23,8 @@ public class MiniJUnit {
                 System.out.println("TEST PASSED!!!");
             }
         }
+
+
     }
 
 }
