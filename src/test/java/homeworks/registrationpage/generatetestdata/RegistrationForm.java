@@ -17,7 +17,7 @@ public class RegistrationForm extends TestBase {
     @Test
     void firstTest() {
 
-        // мною написанные методы из TestBase
+        // мною написанные методы из RandomUtils
 //        String firstName = randomString(10);
 //        String lastName = randomString(10);
 //        String userEmail = randomEmail();
