@@ -47,4 +47,5 @@ tasks.withType(JavaCompile) {
 // сказать какой тест движок использовать
 test {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 }
