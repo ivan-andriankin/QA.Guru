@@ -2,6 +2,7 @@ package homeworks.moex;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 

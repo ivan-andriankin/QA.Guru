@@ -16,8 +16,8 @@ allure {
     adapter { // отвечает за появление папки build/allure-results
         aspectjWeaver.set(true) // обработка аннотации @Step
         frameworks {
-            junit5 {
-                adapterVersion.set("2.19.0")
+            junit5 { // название фреймворка
+                adapterVersion.set("2.19.0") // версия интеграции фреймворка и Allure
             }
         }
     }
@@ -48,4 +48,10 @@ tasks.withType(JavaCompile) {
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+}
+
+task simple_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("simple")
+    }
 }
