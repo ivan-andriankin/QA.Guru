@@ -5,7 +5,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 import practice.allure.WebSteps;
 
-public class TestInvokation {
+public class InvokationAnnotationStepsTest {
 
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int ISSUE = 74;
