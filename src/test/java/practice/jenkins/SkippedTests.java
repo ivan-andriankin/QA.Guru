@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class SkippedTests {
 
     @Test
-    @Disabled("Some reason")
+    @Disabled
     void test1() {
         assertTrue(true);
     }
