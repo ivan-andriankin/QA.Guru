@@ -12,7 +12,7 @@ public class RegistrationForm extends TestBase {
 
     @Test
     @Tag("remote")
-    void firstTest() {
+    void registrationFormTest() {
 
         // мною написанные методы из RandomUtils
 //        String firstName = randomString(10);
