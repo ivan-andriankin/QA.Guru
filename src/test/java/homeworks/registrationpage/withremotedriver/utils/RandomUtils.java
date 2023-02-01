@@ -1,10 +1,8 @@
-package homeworks.registrationpage.generatetestdata.utils;
+package homeworks.registrationpage.withremotedriver.utils;
 
 import com.github.javafaker.Faker;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -49,7 +47,7 @@ public class RandomUtils {
         String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         int monthsIndex = new Random().nextInt(months.length);
 
-        String day = faker.number().numberBetween(10, 28) + "";
+        String day = faker.number().numberBetween(1, 28) + "";
 
         String[] date = {day, months[monthsIndex], year};
 
