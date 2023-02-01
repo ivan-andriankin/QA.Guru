@@ -90,6 +90,10 @@ public class RegistrationPage {
         stateCityElement.$(byText(state)).click();
         stateCityElement.$(byText("Select City")).click();
         stateCityElement.$(byText(city)).click();
+        return this;
+    }
+
+    public RegistrationPage submitForm() {
         $("#submit").click();
         return this;
     }

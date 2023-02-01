@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static homeworks.registrationpage.generatetestdata.utils.RandomUtils.*;
+import static io.qameta.allure.Allure.step;
 
 public class RegistrationForm extends TestBase {
 
@@ -33,20 +34,30 @@ public class RegistrationForm extends TestBase {
         String state = "Rajasthan"; // нет необходимости в генерации тестовых данных
         String city = "Jaipur"; // нет необходимости в генерации тестовых данных
 
-        registrationPage.openPage()
-                .setFirstName(firstName)
-                .setLastName(lastName)
-                .setEmail(userEmail)
-                .setGender(gender)
-                .setUserNumber(userNumber)
-                .setBirthDate(userBirthday[0], userBirthday[1], userBirthday[2])
-                .setUserSubject(userSubjects[0], userSubjects[1])
-                .setUserHobby(userHobbies[0], userHobbies[1])
-                .uploadPicture("images/road.png")
-                .setCurrentAddress(currentAddress)
-                .setStateAndCity(state, city);
+        step("Open form", () -> {
+            registrationPage.openPage();
+        });
 
-        registrationPage.verifyResultsModalAppears()
+        step("Fill out the form", () -> {
+            registrationPage.setFirstName(firstName)
+                    .setLastName(lastName)
+                    .setEmail(userEmail)
+                    .setGender(gender)
+                    .setUserNumber(userNumber)
+                    .setBirthDate(userBirthday[0], userBirthday[1], userBirthday[2])
+                    .setUserSubject(userSubjects[0], userSubjects[1])
+                    .setUserHobby(userHobbies[0], userHobbies[1])
+                    .uploadPicture("images/road.png")
+                    .setCurrentAddress(currentAddress)
+                    .setStateAndCity(state, city);
+        });
+
+        step("Submit the form", () -> {
+            registrationPage.submitForm();
+        });
+
+        step("Verify results", () -> {
+            registrationPage.verifyResultsModalAppears()
                 .verifyResult("Student Name", firstName + " " + lastName)
                 .verifyResult("Student Email", userEmail)
                 .verifyResult("Gender", gender)
@@ -57,8 +68,8 @@ public class RegistrationForm extends TestBase {
                 .verifyResult("Hobbies", userHobbies[0] + ", " + userHobbies[1])
                 .verifyResult("Picture", "road.png")
                 .verifyResult("Address", currentAddress)
-                .verifyResult("State and City", state + " " + city)
-        ;
+                .verifyResult("State and City", state + " " + city);
+        });
 
         // close the confirmation pop-up
         $("#closeLargeModal").click();
