@@ -1,6 +1,7 @@
 package homeworks.registrationpage.withremotedriver;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -9,6 +10,7 @@ import static homeworks.registrationpage.generatetestdata.utils.RandomUtils.*;
 public class RegistrationForm extends TestBase {
 
     @Test
+    @Tag("remote")
     void firstTest() {
 
         // мною написанные методы из RandomUtils
