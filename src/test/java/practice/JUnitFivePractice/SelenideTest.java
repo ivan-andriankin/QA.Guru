@@ -18,12 +18,12 @@ import static com.codeborne.selenide.Selenide.open;
 public class SelenideTest {
 
     // базовый скелет для @MethodSource
-    static Stream<Arguments> selenideLocaleDataProvider() { // todo make uncomment
-        return Stream.of(
-                Arguments.of(Locale.EN, List.of("Quick start", "Docs", "FAQ", "Blog", "Javadoc", "Users", "Quotes")),
-                Arguments.of(Locale.RU, List.of("С чего начать?", "Док", "ЧАВО", "Блог", "Javadoc", "Пользователи", "Отзывы"))
-        );
-    }
+//    static Stream<Arguments> selenideLocaleDataProvider() { // todo make uncomment
+//        return Stream.of(
+//                Arguments.of(Locale.EN, List.of("Quick start", "Docs", "FAQ", "Blog", "Javadoc", "Users", "Quotes")),
+//                Arguments.of(Locale.RU, List.of("С чего начать?", "Док", "ЧАВО", "Блог", "Javadoc", "Пользователи", "Отзывы"))
+//        );
+//    }
 
     @MethodSource("selenideLocaleDataProvider")
     @ParameterizedTest(name = "Для локали {0} отображаются кнопки {1}")

@@ -44,6 +44,18 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
 // сказать какой тест движок использовать
 test {
     useJUnitPlatform()
@@ -61,3 +73,24 @@ task remote_test(type: Test) {
         includeTags("remote")
     }
 }
+
+task one_property_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("one_property")
+    }
+}
+
+task hello_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("hello")
+    }
+}
+
+task two_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("one_property", "hello")
+        excludeTags("prod")
+    }
+}
+
+

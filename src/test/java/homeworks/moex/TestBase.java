@@ -23,11 +23,11 @@ public class TestBase {
         );
     }
 
-    static Stream<Arguments> moexLocaleDataProvider() { // todo make uncomment
-        return Stream.of(
-                Arguments.of(Locale.EN, List.of("Markets", "Indices", "Market data", "Listing", "Connectivity", "News and events", "About MOEX", "Investor Relations")),
-                Arguments.of(Locale.RU, List.of("Продукты и услуги", "Биржевая информация", "Документы", "Медиа", "О компании"))
-        );
-    }
+//    static Stream<Arguments> moexLocaleDataProvider() { // todo make uncomment
+//        return Stream.of(
+//                Arguments.of(Locale.EN, List.of("Markets", "Indices", "Market data", "Listing", "Connectivity", "News and events", "About MOEX", "Investor Relations")),
+//                Arguments.of(Locale.RU, List.of("Продукты и услуги", "Биржевая информация", "Документы", "Медиа", "О компании"))
+//        );
+//    }
 
 }
