@@ -17,20 +17,16 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        //Configuration.baseUrl = "https://demoqa.com";
-        // тоже самое что и:
-        Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "100.0";
-        Configuration.browserSize = "1600x800";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browser = System.getProperty("browserName","chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion","100.0");
+        Configuration.browserSize = System.getProperty("screenSize","1600x800");
+        Configuration.remote = System.getProperty("remoteBrowserAddress");  // передается из дженкинса "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-//        DesiredCapabilities capabilities = new DesiredCapabilities(); // todo  uncomment this
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,      // окошко в окошке
-//                "enableVideo", true             // запись видео
-//        ));
-//        Configuration.browserCapabilities = capabilities;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);    // окошко в окошке
+        capabilities.setCapability("enableVideo", true);  // запись видео
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
