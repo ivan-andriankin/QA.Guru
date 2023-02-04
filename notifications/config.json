@@ -5,13 +5,13 @@
     "environment": "qa.guru",
     "comment": "any comment here",
     "reportLink": "https://jenkins.autotests.cloud",
-    "language": "ru",
-    "allureFolder": "",
-    "enableChart": false
+    "language": "en",
+    "allureFolder": "build/reports/allure-report/allureReport/",
+    "enableChart": true
   },
   "telegram": {
-    "token": "",
-    "chat": "",
+    "token": "6058691373:AAFof5-0yXhzI8Kct-tfu0XU--vFGfYkr8k",
+    "chat": "196923634",
     "replyTo": ""
   }
 }
