@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SelenideTest {
 
     // базовый скелет для @MethodSource
-    static Stream<Arguments> selenideLocaleDataProvider() { // todo make uncomment
+    static Stream<Arguments> selenideLocaleDataProvider() { // todo fails with "gradle clean simple_test
         return Stream.of(
                 Arguments.of(Locale.EN, List.of("Quick start", "Docs", "FAQ", "Blog", "Javadoc", "Users", "Quotes")),
                 Arguments.of(Locale.RU, List.of("С чего начать?", "Док", "ЧАВО", "Блог", "Javadoc", "Пользователи", "Отзывы"))

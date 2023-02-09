@@ -71,5 +71,13 @@ public class MoexTests extends TestBase {
         $(".header__menu-wrapper").$$(".tablink").shouldHave(texts(buttons));
     }
 
+
+    @MethodSource("kittTopMenuList")
+    @ParameterizedTest(name = "Отображаются кнопки меню {0}")
+    void test1(List<String> buttons) {
+        open("/");
+        $$(".kitt-top-menu__item.kitt-top-menu__item_first").shouldHave(texts(buttons));
+    }
+
 }
 

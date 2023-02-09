@@ -25,7 +25,7 @@ public class SelenideFilesTest {
     void downloadTest() throws Exception {
         open("https://github.com/junit-team/junit5/blob/main/README.md");
         File downloadedFile = $("#raw-url").download();
-        try (InputStream is = new FileInputStream(downloadedFile);) { // todo make uncomment
+        try (InputStream is = new FileInputStream(downloadedFile);) { // todo fails with "gradle clean simple_test
             byte[] bytes = is.readAllBytes();
             String textContent = new String(bytes, StandardCharsets.UTF_8);
             assertThat(textContent).contains("This repository is the home of the next generation of JUnit, _JUnit 5_.");
